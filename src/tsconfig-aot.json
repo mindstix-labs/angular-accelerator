@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "types": [ "node" ],
+    "typeRoots": [ "../node_modules/@types" ],
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowJs": true,
+    "outDir": "./js"
+  },
+  
+  "files": [
+    "app/app.module.ts",
+    "app/lazy/lazy.module.ts",
+    "main-aot.ts",
+    "vendor.ts",
+    "polyfills.ts"
+  ],
+
+  "angularCompilerOptions": {
+   "genDir": "aot/src",
+   "skipMetadataEmit" : true
+ }
+}

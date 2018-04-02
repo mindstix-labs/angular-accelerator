@@ -1,0 +1,11 @@
+<main>
+  <h1>{{ 'HELLO' | translate:param }}</h1>
+  <select #langSelect (change)="translate.use(langSelect.value)">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+  </select>
+  <h1><img src="{{IMAGE_URL}}"></h1>
+  <nav>
+    <a routerLink="lazy">Lazy</a>
+  </nav>
+  <router-outlet></router-outlet>
+</main>
